@@ -1,6 +1,7 @@
 package com.miaoshaproject.dao;
 
 import com.miaoshaproject.dataobject.UserDO;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserDOMapper {
     /**
@@ -51,5 +52,5 @@ public interface UserDOMapper {
      */
     int updateByPrimaryKey(UserDO record);
 
-    UserDO selectByTelphone(String telphone);
+    UserDO selectByTelphone(@Param("telphone") String telphone);
 }
